@@ -598,6 +598,7 @@ footer .down p {
 =========================================== */
 
 /* MOBILE (0-767px) */
+/* MOBILE (0-767px) - CURSOR TEXT FIX ADD KIYA */
 @media (max-width: 767px) {
   #main {
     margin: 0 2vw;
@@ -649,6 +650,22 @@ footer .down p {
     min-height: 0 !important;
     object-fit: cover !important;
     object-position: center top !important;
+    cursor: default !important; /* 🔥 CURSOR FIX */
+  }
+  
+  /* 🔥 MOBILE IMAGE CURSOR + Z-INDEX FIX */
+  #pageimg .imgelem img,
+  #page7 .box img,
+  .hero img {
+    cursor: pointer !important;
+    pointer-events: none !important; /* Text clickable rahega */
+  }
+  
+  /* 🔥 TEXT OVER IMAGE Z-INDEX FIX */
+  .textimg {
+    z-index: 20 !important;
+    position: relative !important;
+    pointer-events: auto !important;
   }
   
   #pageimg {
@@ -661,6 +678,7 @@ footer .down p {
   #pageimg .imgelem {
     width: 100%;
     height: 40vh;
+    position: relative;
   }
   
   #page4 {
@@ -739,6 +757,7 @@ footer .down p {
     text-align: center;
   }
 }
+
 
 /* TABLET (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
